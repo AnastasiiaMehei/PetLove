@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.logoMob {
+    width: 76px;
+height: 20px;
+background-color: transparent;
+}
+.btn {
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iconMenu {
+    stroke: #262626;
+    width: 28px;
+    height: 24px;
+}

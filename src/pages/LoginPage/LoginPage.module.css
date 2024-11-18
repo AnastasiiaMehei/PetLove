@@ -1,0 +1,6 @@
+.containerLoginPage {
+    width: 295px;
+height: 302px;
+    display: flex;
+    flex-direction: column;
+}
