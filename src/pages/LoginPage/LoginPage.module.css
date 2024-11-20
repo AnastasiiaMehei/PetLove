@@ -1,6 +1,93 @@
 .containerLoginPage {
-    width: 295px;
-height: 302px;
+    width: 335px;
     display: flex;
     flex-direction: column;
+    gap:10px;
+}
+.dogBackground {
+    width: 335px;
+height: 280px;
+border-radius: 24px;
+    background-color: var(--primary-color-yellow) ;
+background-image: url('../../images/mob-dog-1x.png');
+background-repeat: no-repeat;
+background-position: center;
+background-size: contain;
+}
+.registrationContainer {
+    border-radius: 30px;
+width: 295px;
+padding: 70px 20px;
+background: var(--primary-color-white);
+gap: 24px;
+display: flex;
+flex-direction: column;
+}
+.titleLogIn {
+    font-weight: 700;
+font-size: 28px;
+line-height: 1;
+letter-spacing: -0.04em;
+margin-bottom: 10px;
+}
+.paragraphLogIn {
+font-weight: 500;
+font-size: 14px;
+line-height: 1.28571;
+letter-spacing: -0.02em;
+}
+.formLogIn {
+display: flex;
+flex-direction: column;
+gap: 10px;
+/* margin-bottom: 24px; */
+}
+.inputs {
+    border: 1px solid rgba(38, 38, 38, 0.15);
+border-radius: 30px;
+padding: 12px 60px 12px 12px;
+}
+.iconEyeOff {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 86%;
+    right: 23%;
+}
+.btnForm {
+    border: none;
+    border-radius: 30px;
+padding: 12px 15px;
+width: 295px;
+height: 42px;
+background: var(--primary-color-yellow);
+font-weight: 700;
+font-size: 14px;
+line-height: 1.28571;
+letter-spacing: -0.03em;
+text-transform: uppercase;
+color: var(--primary-color-white);
+margin-top: 30px;
+cursor: pointer;
+}
+.questionForm {
+font-weight: 500;
+font-size: 12px;
+line-height: 1.16667;
+letter-spacing: -0.03em;
+color: var(--primary-color-grey);
+display: flex;
+justify-content: center;
+}
+.spanForm {
+
+    font-weight: 700;
+text-decoration: underline;
+text-decoration-skip-ink: none;
+color: var(--primary-color-yellow);
+}
+.btnDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }

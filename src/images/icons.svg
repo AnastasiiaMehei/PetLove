@@ -47,7 +47,7 @@
 <path fill="none" stroke="#08aa83" style="stroke: var(--color4, #08aa83)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.1818" d="M26.667 9.333l-14.667 14.667-6.667-6.667"></path>
 </symbol>
 <symbol id="icon-close" viewBox="0 0 32 32">
-<path fill="none" stroke="#ef2447" style="stroke: var(--color5, #ef2447)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="4" d="M28.833 3.167l-25.667 25.667M3.166 3.167l25.666 25.667"></path>
+<path  stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="4" d="M28.833 3.167l-25.667 25.667M3.166 3.167l25.666 25.667"></path>
 </symbol>
 <symbol id="icon-search" viewBox="0 0 32 32">
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.5556" d="M14.667 25.333c5.891 0 10.667-4.776 10.667-10.667s-4.776-10.667-10.667-10.667c-5.891 0-10.667 4.776-10.667 10.667s4.776 10.667 10.667 10.667z"></path>
@@ -77,6 +77,12 @@
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3" d="M4 16h24"></path>
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3" d="M4 8h24"></path>
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3" d="M4 24h24"></path>
+</symbol>
+<symbol id="icon-left-side" viewBox="0 0 19 32">
+<path d="M7.557 17.578c-0.208-0.207-0.374-0.452-0.486-0.723s-0.171-0.561-0.171-0.855c0-0.293 0.058-0.584 0.171-0.855s0.278-0.517 0.486-0.723l10.2-10.178c0.208-0.207 0.374-0.452 0.486-0.723s0.171-0.561 0.171-0.855c0-0.293-0.058-0.584-0.171-0.855s-0.278-0.517-0.486-0.723c-0.416-0.414-0.98-0.646-1.567-0.646s-1.15 0.232-1.567 0.646l-10.2 10.2c-1.248 1.25-1.95 2.944-1.95 4.711s0.701 3.461 1.95 4.711l10.2 10.2c0.414 0.411 0.973 0.642 1.556 0.645 0.292 0.002 0.582-0.054 0.853-0.165s0.517-0.274 0.725-0.479c0.208-0.207 0.374-0.452 0.486-0.723s0.171-0.561 0.171-0.855-0.058-0.584-0.171-0.855c-0.113-0.271-0.278-0.517-0.486-0.723l-10.2-10.178z"></path>
+</symbol>
+<symbol id="icon-right-side" viewBox="0 0 19 32">
+<path d="M11.11 17.578c0.208-0.207 0.374-0.452 0.486-0.723s0.171-0.561 0.171-0.855c0-0.293-0.058-0.584-0.171-0.855s-0.278-0.517-0.486-0.723l-10.2-10.178c-0.208-0.207-0.374-0.452-0.486-0.723s-0.171-0.561-0.171-0.855c0-0.293 0.058-0.584 0.171-0.855s0.278-0.517 0.486-0.723c0.416-0.414 0.98-0.646 1.567-0.646s1.15 0.232 1.567 0.646l10.2 10.2c1.248 1.25 1.95 2.944 1.95 4.711s-0.701 3.461-1.95 4.711l-10.2 10.2c-0.414 0.41-0.973 0.642-1.556 0.645-0.292 0.002-0.582-0.054-0.853-0.165s-0.517-0.274-0.725-0.479c-0.208-0.207-0.374-0.452-0.486-0.723s-0.171-0.561-0.171-0.855 0.058-0.584 0.171-0.855c0.113-0.271 0.278-0.517 0.486-0.723l10.2-10.178z"></path>
 </symbol>
 </defs>
 </svg>

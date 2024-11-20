@@ -1,0 +1,33 @@
+.wrapperNews {
+display: flex;
+flex-direction: column;
+gap: 20px;
+padding-top: 56px;
+}
+.titleNews {
+font-weight: 700;
+font-size: 28px;
+line-height: 1;
+letter-spacing: -0.03em;
+color: var(--primary-color-black);
+}
+.input {
+    border: 1px solid var(--primary-color-grey-light);
+    border-radius: 30px;
+    padding: 12px 152px 12px 12px;
+    /* width: 335px; */
+    /* height: 42px; */
+    position: relative;
+}
+.search {
+position: absolute;
+width: 18px;
+height: 18px;
+fill: transparent;
+stroke: var(--primary-color-black);
+top: 112px;
+    right: 18%;
+}
+
+.newsCard {
+}

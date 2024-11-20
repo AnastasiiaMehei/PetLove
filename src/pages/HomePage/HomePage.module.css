@@ -1,0 +1,38 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 335px;
+}
+.headerContainer {
+    background-color: var(--primary-color-yellow) ;
+    border-radius: 24px;
+    padding-left: 20px;
+padding-right: 20px;
+display: flex;
+flex-direction: column;
+gap: 24px;
+height: 335px;
+}
+.mainTitle {
+font-weight: 700;
+font-size: 50px;
+line-height: 0.96;
+letter-spacing: -0.03em;
+color: var(--primary-color-white);
+}
+.mainTitleSpan {
+    color: var( --primary-color-yellow-span);}
+    .mainParagraph {
+font-weight: 500;
+font-size: 14px;
+line-height: 1.28571;
+letter-spacing: -0.02em;
+color: var(--primary-color-white);
+    }
+    .photo {
+        border-radius: 24px;
+
+        width: 335px;
+height: 402px;
+        background-image: url(../../images/mob-girl-with-cat-1x.png);
+    }

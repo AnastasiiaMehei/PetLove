@@ -1,0 +1,76 @@
+.wrapperNewsCard {
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+.wrapperNewsCardPhoto {
+    border-radius: 15px;
+width: 335px;
+height: 190px;
+border: 1px solid red;
+    background: url();
+}
+
+.wrapperNewsCardText {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+.title {
+font-weight: 700;
+font-size: 16px;
+line-height: 1.25;
+letter-spacing: -0.03em;
+color: var(--primary-color-black);
+}
+.description {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.28571;
+    letter-spacing: -0.02em;
+    color: var(--primary-color-black);}
+    .readMoreDiv {
+        display: flex;
+        justify-content: space-between;
+    }
+.date {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.28571;
+    letter-spacing: -0.02em;
+    color: var(--primary-color-grey);
+}
+.btn {
+    background: none;
+    border: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.28571;
+    letter-spacing: -0.02em;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: var(--primary-color-yellow);
+}
+.loadMoreBtnsDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.loadMoreBtns {
+    background-color: transparent;
+
+    width: 40px;
+height: 40px;
+border-radius: 100%;
+border: 1px solid var(--primary-color-yellow-black-light);
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--primary-color-black);
+}
+.iconLeft {
+width: 7px;
+height: 12px;
+fill: var(--primary-color-grey);
+
+}

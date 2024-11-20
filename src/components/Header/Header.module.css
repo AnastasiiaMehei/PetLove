@@ -3,6 +3,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+width: 335px;
 }
 .logoMob {
     width: 76px;

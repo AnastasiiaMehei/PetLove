@@ -1,0 +1,8 @@
+.mainParagraph {
+font-weight: 700;
+font-size: 28px;
+line-height: 1;
+letter-spacing: -0.03em;
+color: var(--primary-color-black);
+padding-top: 58px;
+}
