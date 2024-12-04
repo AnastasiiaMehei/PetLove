@@ -9,7 +9,7 @@ export default function FriendCard() {
 </div>
 <div className={css.mainInfo}>
     <div className={css.avatar}></div>
-    <div>
+    <div className={css.paragraphDiv}>
         <p className={css.additionalInfoTitle}>title</p>
         <p className={css.additionalInfo}><span className={css.additionalInfoSpan}>Email:</span>Email</p>
         <p className={css.additionalInfo}><span className={css.additionalInfoSpan}>Address: </span>Address</p>

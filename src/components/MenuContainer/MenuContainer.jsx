@@ -16,7 +16,7 @@ export default function MenuContainer () {
    <div>
    <nav className={css.navLinks}>
     <NavLink className={css.navLink} to={"/news"}>News</NavLink>
-    {/* <NavLink className={css.navLink} to={"/friends"}>Find pet</NavLink> */}
+    <NavLink className={css.navLink} to={"/friends"}>Find pet</NavLink>
     <NavLink className={css.navLink} to={"/friends"}>Our friends</NavLink>
 
    </nav>

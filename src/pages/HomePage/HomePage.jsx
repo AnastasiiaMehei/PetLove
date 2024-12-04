@@ -1,5 +1,8 @@
-import MenuContainer from '../../components/MenuContainer/MenuContainer'
+import FindPetForm from '../../components/FindPetForm/FindPetForm'
 import css from './HomePage.module.css'
+// import NewsPage from '../../pages/NewsPage/NewsPage'
+// import FriendsPage from '../../pages/FriendsPage/FriendsPage'
+
 export default function HomePage() {
   return (
   <div className={css.wrapper}>
@@ -15,7 +18,10 @@ Take good <span className={css.mainTitleSpan}>care</span> of your small pets
     <div className={css.photo}>
 
     </div>
-  <MenuContainer/>
+  {/* <MenuContainer/> */}
+  {/* <NewsPage/> */}
+  <FindPetForm/>
+
   </div>
   )
 }
