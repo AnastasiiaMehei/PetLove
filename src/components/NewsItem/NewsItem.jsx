@@ -1,7 +1,7 @@
 import sprite from "../../images/icons.svg";
 
-import css from "./NewsCard.module.css";
-export default function NewsCard() {
+import css from "./NewsItem.module.css";
+export default function NewsItem() {
   return (
     <div className={css.wrapperNewsCard}>
       <div className={css.wrapperNewsCardPhoto}></div>

@@ -1,15 +1,7 @@
-.wrapperNews {
-display: flex;
-flex-direction: column;
-gap: 20px;
-padding-top: 56px;
-}
-.titleNews {
+.findPetParagraph {
 font-weight: 700;
 font-size: 28px;
 line-height: 1;
 letter-spacing: -0.03em;
 color: var(--primary-color-black);
 }
-
-

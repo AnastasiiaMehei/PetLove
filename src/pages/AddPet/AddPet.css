@@ -1,0 +1,11 @@
+.wrapperAddPet {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.backgroundPet {
+    background: var(--primary-color-yellow) url(../../images/addPet.png);
+    border-radius: 30px;
+width: 335px;
+height: 213px;
+}

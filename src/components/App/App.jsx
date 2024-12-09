@@ -5,6 +5,7 @@ import './App.module.css'
 import Layout from "../Loyout/Loyout";
 import Loader from "../Loader/Loader";
 import NotFound from "../../pages/NotFound/NotFound";
+import NoticesPage from "../../pages/NoticesPage/NoticesPage";
 // import NewsPage from "../../pages/NewsPage/NewsPage";
 const HomePage = lazy(() => import("../../pages/HomePage/HomePage"));
 const RegistrationPage = lazy(() => import("../../pages/RegistrationPage/RegistrationPage"));
@@ -25,7 +26,7 @@ export default function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/news" element={<NewsPage />} />
           <Route path="/friends" element={<FriendsPage />} />
-
+<Route path="/notices" element={<NoticesPage/>}/>
 
           <Route path="*" element={<NotFound />} />
 

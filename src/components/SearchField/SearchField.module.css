@@ -1,0 +1,17 @@
+.input {
+    border: 1px solid var(--primary-color-grey-light);
+    border-radius: 30px;
+    padding: 12px 152px 12px 12px;
+    /* width: 335px; */
+    /* height: 42px; */
+    position: relative;
+}
+.search {
+width: 18px;
+height: 18px;
+fill: transparent;
+stroke: var(--primary-color-black);
+position: fixed;
+top: 167px;
+left: 311px;
+}

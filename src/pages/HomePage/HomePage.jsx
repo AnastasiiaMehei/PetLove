@@ -1,7 +1,4 @@
-import FindPetForm from '../../components/FindPetForm/FindPetForm'
 import css from './HomePage.module.css'
-// import NewsPage from '../../pages/NewsPage/NewsPage'
-// import FriendsPage from '../../pages/FriendsPage/FriendsPage'
 
 export default function HomePage() {
   return (
@@ -18,9 +15,6 @@ Take good <span className={css.mainTitleSpan}>care</span> of your small pets
     <div className={css.photo}>
 
     </div>
-  {/* <MenuContainer/> */}
-  {/* <NewsPage/> */}
-  <FindPetForm/>
 
   </div>
   )
