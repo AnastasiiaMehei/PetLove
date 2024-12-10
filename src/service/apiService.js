@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://petlove.b.goit.study/api/v1';
+const BASE_URL = 'https://petlove.b.goit.study/api';
 
 const instance = axios.create({
   baseURL: BASE_URL,
@@ -10,17 +10,16 @@ instance.interceptors.request.use(config => {
   config.headers['Authorization'] = localStorage.getItem('token');
   return config;
 });
-
-export const getNews = async () => {
+export const getNews = async (query = '') => {
   try {
-    const response = await instance.get('/news');
-    return response.data;
+    const params = query ? { search: query } : {};
+    const response = await instance.get('/news', { params });
+    return response.data.results;
   } catch (error) {
     console.error('Error fetching news:', error);
     throw error;
   }
 };
-
 export const getNotices = async () => {
   try {
     const response = await instance.get('/notices');

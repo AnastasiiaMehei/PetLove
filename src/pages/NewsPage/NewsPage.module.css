@@ -13,3 +13,26 @@ color: var(--primary-color-black);
 }
 
 
+.loadMoreBtnsDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.loadMoreBtns {
+    background-color: transparent;
+
+    width: 40px;
+height: 40px;
+border-radius: 100%;
+border: 1px solid var(--primary-color-yellow-black-light);
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--primary-color-black);
+}
+.iconLeft {
+width: 7px;
+height: 12px;
+fill: var(--primary-color-grey);
+
+}

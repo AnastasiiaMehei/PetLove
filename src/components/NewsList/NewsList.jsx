@@ -1,27 +1,10 @@
-import { useState, useEffect } from 'react';
 import NewsItem from "../NewsItem/NewsItem";
-import { getNews } from '../../service/apiService';
+import PropTypes from 'prop-types';
 
-export default function NewsList() {
-  const [newsItems, setNewsItems] = useState([]);
-
-  useEffect(() => {
-    const fetchNews = async () => {
-      try {
-        const fetchedNews = await getNews();
-        setNewsItems(fetchedNews);
-      } catch (error) {
-        console.error('Failed to fetch news:', error);
-      }
-    };
-
-    fetchNews();
-  }, []);
-
+export default function NewsList({ newsItems }) {
   if (!newsItems || newsItems.length === 0) {
-    return <p>Loading news...</p>;
+    return <p>No news found.</p>;
   }
-
   return (
     <div className="news-list">
       {newsItems.map((item, index) => (
@@ -29,5 +12,8 @@ export default function NewsList() {
       ))}
     </div>
   );
-};
+}
 
+NewsList.propTypes = {
+  newsItems: PropTypes.array.isRequired,
+};
