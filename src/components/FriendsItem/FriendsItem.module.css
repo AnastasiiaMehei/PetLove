@@ -1,12 +1,13 @@
 .container {
     padding: 15px;
     border-radius: 15px;
-width: 305px;
+width: 335px;
 height: 184px;
 background: var(--primary-color-white);
 gap: 10px;
 display: flex;
 flex-direction: column;
+justify-content: center;
 }
 .timeDiv {
 padding: 8px;
@@ -35,14 +36,18 @@ display: flex
 .mainInfo {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    /* justify-content: center; */
     gap: 10px;
-}
+    /* justify-content: space-around; */
+    justify-content: space-around;
+    align-items: center;}
 .avatar {
     border-radius: 100%;
     width: 80px;
     height: 80px;
-border: 1px solid red;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
 }
 .additionalInfoTitle {
 font-weight: 700;

@@ -1,17 +1,18 @@
 .input {
     border: 1px solid var(--primary-color-grey-light);
     border-radius: 30px;
-    padding: 12px 152px 12px 12px;
+    padding: 12px 124px 12px 12px;
     /* width: 335px; */
     /* height: 42px; */
     position: relative;
+    border: none;
 }
 .search {
 width: 18px;
 height: 18px;
 fill: transparent;
 stroke: var(--primary-color-black);
-position: fixed;
-top: 148px;
-left: 311px;
+position: absolute;
+top: 215px;
+    left: 305px;
 }

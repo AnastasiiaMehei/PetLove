@@ -4,11 +4,13 @@ import SearchField from "../../components/SearchField/SearchField";
 import css from "./NewsPage.module.css";
 import { getNews } from "../../service/apiService";
 import sprite from "../../images/icons.svg";
+import ModalAttention from "../../components/ModalAttention/ModalAttention";
 
 
 export default function NewsPage() {
   const [newsItems, setNewsItems] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
+  
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -28,6 +30,7 @@ export default function NewsPage() {
   };
   return (
     <div className={css.wrapperNews}>
+      <ModalAttention/>
       <h2 className={css.titleNews}>News</h2>
       <SearchField onSearch={handleSearch} />
       <div className={css.newsCard}>

@@ -7,6 +7,7 @@ export default function NoticesPage() {
             <p className={css.findPetParagraph}>Find your favorite pet</p>
             <NoticesFilters/>
             <NoticesList/>
+            
         </div>
     )
 }
