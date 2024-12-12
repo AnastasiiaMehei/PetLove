@@ -66,13 +66,13 @@ export default function NoticesItem({ _id, imgURL, title, popularity, name, birt
                 </div>
                 <div className={css.divPetsCharacteristics}>
                 
-                <div className="divPetsDescription">
+                <div className={css.divPetsDescription}>
     <p className={css.namePet}>
         Name 
     </p>
     <p className={css.namePetApi}>{name}</p>
 </div>
-<div className="divPetsDescription">
+<div className={css.divPetsDescription}>
     <p className={css.namePet}>
     Birthday
     </p>

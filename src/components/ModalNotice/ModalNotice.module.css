@@ -16,8 +16,12 @@ width: 335px;
 height: 476px;background: var(--primary-color-white);
 display: flex;
 justify-content: center;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
 padding: 20px;
 padding-top: 40px;
+gap: 20px;
   }
   .divSvg {
     position: relative;
@@ -55,9 +59,19 @@ align-items: center;
 ;
     justify-content: center;
 }
+.divRating {
+  display: flex
+  ;
+  display: flex
+  ;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+}
 .iconStar {
     width: 16px;
     height: 16px;
+    fill: rgba(38, 38, 38, 0.05);
 }
 .title {
 font-weight: 700;
@@ -71,3 +85,65 @@ font-size: 14px;
 line-height: 1.42857;
 color: var(--primary-color-dark-gray);
 }
+.divPetsCharacteristics {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  justify-content: space-between;
+} 
+.divPetsDescription {
+  display: flex;
+  flex-direction: column;
+}
+.namePet { 
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  color: var(--primary-color-grey); 
+}
+.namePetApi {
+  font-family: "Manrope", sans-serif;
+font-weight: 500;
+font-size: 12px;
+line-height: 1.16667;
+letter-spacing: -0.02em;
+color: var(--primary-color-black);
+}
+.petsComment {
+  font-family: "Manrope", sans-serif;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.02em;
+  color: var(--primary-color-dark-gray);
+  margin-top: 8px;
+}
+.divBtnsAddContact{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;}
+.btnsAddContact {
+  border-radius: 30px;
+padding: 6px 12px;
+width: 135px;
+height: 42px;
+font-weight: 700;
+font-size: 14px;
+line-height: 1.28571;
+letter-spacing: -0.03em;
+color: var(--primary-color-white);
+border: none;
+background: var(--primary-color-yellow);
+display: flex
+;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+}
+.btnsAddContact:hover {
+  color: var(--primary-color-yellow);
+  background: var(--primary-color-yellow-light)}

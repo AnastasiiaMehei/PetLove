@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import sprite from "../../images/icons.svg";
 
 import css from './LoginPage.module.css'
@@ -23,7 +24,7 @@ export default function LoginPage () {
                </svg>
 <div className={css.btnDiv} >
 <button className={css.btnForm} type='submit'>Log In</button>
-<p className={css.questionForm}>Don’t have an account? <span className={css.spanForm}>Register</span>
+<p className={css.questionForm}>Don’t have an account? <Link to="/register" className={css.spanForm}>Register</Link>
 </p>
 </div>
 </form>

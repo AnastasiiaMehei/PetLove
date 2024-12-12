@@ -87,7 +87,12 @@ letter-spacing: -0.03em;
 color: var(--primary-color-white);
 border: none;
 background: var(--primary-color-yellow);
+align-items: center;
+display: flex
+;
+justify-content: center;
 }
 .btnsRegLog:hover {
     color: var(--primary-color-yellow);
     background: var(--primary-color-yellow-light)}
+  

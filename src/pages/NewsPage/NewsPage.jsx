@@ -4,7 +4,6 @@ import SearchField from "../../components/SearchField/SearchField";
 import css from "./NewsPage.module.css";
 import { getNews } from "../../service/apiService";
 import sprite from "../../images/icons.svg";
-import ModalNotice from "../../components/ModalNotice/ModalNotice";
 
 
 export default function NewsPage() {
@@ -30,7 +29,6 @@ export default function NewsPage() {
   };
   return (
     <div className={css.wrapperNews}>
-      <ModalNotice/>
       <h2 className={css.titleNews}>News</h2>
       <SearchField onSearch={handleSearch} />
       <div className={css.newsCard}>
