@@ -42,17 +42,20 @@ flex-direction: column;
 gap: 10px;
 /* margin-bottom: 24px; */
 }
+.divPassword {
+    position: relative;
+}
 .inputs {
     border: 1px solid rgba(38, 38, 38, 0.15);
 border-radius: 30px;
-padding: 12px 60px 12px 12px;
+padding: 12px 118px 12px 12px;
 }
 .iconEyeOff {
     width: 18px;
     height: 18px;
     position: absolute;
-    top: 86%;
-    right: 23%;
+    top: 31%;
+    right: 8%;
 }
 .btnForm {
     border: none;

@@ -45,22 +45,25 @@ gap: 10px;
 .inputs {
     border: 1px solid rgba(38, 38, 38, 0.15);
 border-radius: 30px;
-padding: 12px 60px 12px 12px;
-position: relative;
+padding: 12px 118px 12px 12px;
+}
+.divInputPassword1 {
+    position: relative;
 }
 .iconEyeOff {
     width: 18px;
     height: 18px;
     position: absolute;
-    top: 97%;
-    right: 12%;
+    top: 31%;
+    right: 8%;
 }
 .iconEyeOffConfirm {
     width: 18px;
     height: 18px;
     position: absolute;
     top: 94%;
-    right: 31%;
+    top: 28%;
+    right: 8%;
 }
 .btnForm {
     border: none;

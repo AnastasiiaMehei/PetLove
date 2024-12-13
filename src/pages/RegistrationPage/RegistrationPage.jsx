@@ -4,12 +4,17 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import { registerUser } from '../../service/apiService';
 import css from "./RegistrationPage.module.css";
+
 const schema = yup.object().shape({
   name: yup.string().required("Name is required"),
   email: yup
     .string()
-    .email("Invalid email format")
+    .matches(/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/, "Invalid email format")
     .required("Email is required"),
   password: yup
     .string()
@@ -20,6 +25,7 @@ const schema = yup.object().shape({
     .oneOf([yup.ref("password"), null], "Passwords must match")
     .required("Confirm password is required"),
 });
+
 export default function RegistrationPage() {
   const navigate = useNavigate();
   const {
@@ -32,28 +38,21 @@ export default function RegistrationPage() {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch("/api/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || "Registration failed");
-      }
-
-      const result = await response.json();
-      localStorage.setItem("token", result.token);
+      const { name, email, password } = data;
+      const response = await registerUser({ name, email, password });
+      localStorage.setItem("token", response.token);
+      toast.success('Registration succssful!')
       navigate("/profile");
     } catch (error) {
-      alert(error.message); // Відобразити помилку користувачеві
+      alert(error.message); 
+      toast.error(error.message);// Display error to the user
     }
   };
+
   return (
     <div className={css.containerRegistrationPage}>
+            <ToastContainer />
+
       <div className={css.catBackground}></div>
       <div className={css.registrationContainer}>
         <div>
@@ -66,9 +65,9 @@ export default function RegistrationPage() {
           <form className={css.formLogIn} onSubmit={handleSubmit(onSubmit)}>
             <input
               className={css.inputs}
-              type="text "
+              type="text"
               placeholder="Name"
-              onSubmit={handleSubmit(onSubmit)}
+              {...register("name")}
             />
             {errors.name && <p className={css.error}>{errors.name.message}</p>}
 
@@ -78,43 +77,42 @@ export default function RegistrationPage() {
               placeholder="Email"
               {...register("email")}
             />
-            {errors.email && (
-              <p className={css.error}>{errors.email.message}</p>
-            )}
+            {errors.email && <p className={css.error}>{errors.email.message}</p>}
 
-            <input
-              className={css.inputs}
-              type="password "
-              placeholder="Password "
-              {...register("password")}
-            />
-            {errors.password && (
-              <p className={css.error}>{errors.password.message}</p>
-            )}
+            <div className={css.divInputPassword1}>
+              <input
+                className={css.inputs}
+                type="password"
+                placeholder="Password"
+                {...register("password")}
+              />
+              {errors.password && <p className={css.error}>{errors.password.message}</p>}
+              <svg className={css.iconEyeOff}>
+                <use xlinkHref={`${sprite}#icon-eye`}></use>
+              </svg>
+            </div>
 
-            <input
-              className={css.inputs}
-              type="password "
-              placeholder="Confirm password "
-              {...register("confirmPassword")}
-            />
-            {errors.confirmPassword && (
-              <p className={css.error}>{errors.confirmPassword.message}</p>
-            )}
+            <div className={css.divInputPassword1}>
+              <input
+                className={css.inputs}
+                type="password"
+                placeholder="Confirm password"
+                {...register("confirmPassword")}
+              />
+              {errors.confirmPassword && <p className={css.error}>{errors.confirmPassword.message}</p>}
+              <svg className={css.iconEyeOffConfirm}>
+                <use xlinkHref={`${sprite}#icon-eye`}></use>
+              </svg>
+            </div>
 
-            <svg className={css.iconEyeOff}>
-              <use xlinkHref={`${sprite}#${"icon-eye"}`}></use>
-            </svg>
+            <button className={css.btnForm} type="submit">
+              Registration
+            </button>
 
-            <svg className={css.iconEyeOffConfirm}>
-              <use xlinkHref={`${sprite}#${"icon-eye"}`}></use>
-            </svg>
             <div className={css.btnDiv}>
-              <button className={css.btnForm} type="submit">
-              Registration              </button>
               <p className={css.questionForm}>
                 Already have an account?{" "}
-                <Link to="/login" className={css.spanForm}>
+                <Link to="/users/signin" className={css.spanForm}>
                   Login
                 </Link>
               </p>

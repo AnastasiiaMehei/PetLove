@@ -103,8 +103,9 @@ export default function NoticesItem({ _id, imgURL, title, popularity, name, birt
 
             </div>
             <div className={css.divLearnMoreBtn}>
-<p className={css.price}>${price}</p>
-<div className={css.divSend}>
+            <p className={css.price}>
+  {price !== undefined ? `$${price}` : 'Not available'}
+</p><div className={css.divSend}>
 <button onClick={handleLearnMore} className={css.learnMoreBtn} type="button">Learn more</button>
 <button onClick={handleFavoriteToggle} className={css.btnLike} type="button"> 
 <svg className={css.iconYellowLike}>
@@ -134,5 +135,5 @@ NoticesItem.propTypes = {
     species: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
     comment: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
+    price: PropTypes.number,
   };

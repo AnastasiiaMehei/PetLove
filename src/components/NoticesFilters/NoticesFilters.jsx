@@ -1,13 +1,11 @@
-import SearchField from '../SearchField/SearchField'
+import SearchField from '../SearchField/SearchField';
 import PropTypes from 'prop-types';
-
 import css from "./NoticesFilters.module.css";
 import { getCategories, getSexOptions, getSpecies, searchCities } from '../../service/apiService';
-
 import { useEffect, useState } from 'react';
 import AsyncSelect from 'react-select/async';
 
-export default function NoticesFilters({ onFilterChange, onSortChange  }) {
+export default function NoticesFilters({ onFilterChange, onSortChange }) {
   const [categories, setCategories] = useState([]);
   const [sexOptions, setSexOptions] = useState([]);
   const [species, setSpecies] = useState([]);
@@ -16,6 +14,7 @@ export default function NoticesFilters({ onFilterChange, onSortChange  }) {
     sex: '',
     species: '',
     location: '',
+    search: '', // Initialize search with an empty string
   });
 
   useEffect(() => {
@@ -43,31 +42,39 @@ export default function NoticesFilters({ onFilterChange, onSortChange  }) {
     onFilterChange(newFilters);
   };
 
+  const handleSearchChange = (value) => {
+    handleFilterChange('search', value);
+  };
+
   const loadCityOptions = async (inputValue) => {
     if (!inputValue) return [];
     try {
       const cities = await searchCities(inputValue);
       return cities.map(city => ({
-        value: city._id, // Assuming city has an _id field
-        label: city.cityEn, // Assuming city has a cityEn field
+        value: city._id,
+        label: city.cityEn,
       }));
     } catch (error) {
       console.error('Error loading city options:', error);
       return [];
     }
   };
+
   const [sort, setSort] = useState('popular');
 
   const handleSortChange = (value) => {
-      setSort(value);
-      onSortChange(value);
+    setSort(value);
+    onSortChange(value);
   };
 
   return (
     <div className={css.wrapper}>
       <div className={css.filterContainer}>
-        {/* <input className={css.search} type="text" placeholder="Search" /> */}
-        <SearchField/>
+        <SearchField
+          value={filters.search}
+          onChange={handleSearchChange}
+          placeholder="Search"
+        />
         <select
           className={css.category}
           value={filters.category}
@@ -101,18 +108,7 @@ export default function NoticesFilters({ onFilterChange, onSortChange  }) {
             </option>
           ))}
         </select>
-         {/* <input className={css.search} type="text" placeholder="Location" /> */}
-         {/* <Select
-                className={css.select}
-                value={filters.location}
-                onChange={(option) => handleFilterChange('location', option ? option.value : '')}
-                options={locations.map((location) => ({
-                    value: location.id,
-                    label: location.name,
-                }))}
-                placeholder="Select Location"
-            /> */}
-             <AsyncSelect
+        <AsyncSelect
           className={css.select}
           cacheOptions
           loadOptions={loadCityOptions}
@@ -122,24 +118,15 @@ export default function NoticesFilters({ onFilterChange, onSortChange  }) {
         />
       </div>
       <div className={css.divBtnsChose}>
-        <button                 className={`${css.buttonsChose} ${sort === 'popular' ? css.active : ''}`}
- type="button" onClick={() => handleSortChange('popular')}>Popular</button>
-        <button  className={`${css.buttonsChose} ${sort === 'unpopular' ? css.active : ''}`}
-                type="button"
-                onClick={() => handleSortChange('unpopular')}
-            >Unpopular</button>
-        <button  className={`${css.buttonsChose} ${sort === 'cheap' ? css.active : ''}`}
-                type="button"
-                onClick={() => handleSortChange('cheap')}
-            >Cheap</button>
-        <button className={`${css.buttonsChose} ${sort === 'expensive' ? css.active : ''}`}
-                type="button"
-                onClick={() => handleSortChange('expensive')}
-            >Expensive</button>
+        <button className={`${css.buttonsChose} ${sort === 'popular' ? css.active : ''}`} type="button" onClick={() => handleSortChange('popular')}>Popular</button>
+        <button className={`${css.buttonsChose} ${sort === 'unpopular' ? css.active : ''}`} type="button" onClick={() => handleSortChange('unpopular')}>Unpopular</button>
+        <button className={`${css.buttonsChose} ${sort === 'cheap' ? css.active : ''}`} type="button" onClick={() => handleSortChange('cheap')}>Cheap</button>
+        <button className={`${css.buttonsChose} ${sort === 'expensive' ? css.active : ''}`} type="button" onClick={() => handleSortChange('expensive')}>Expensive</button>
       </div>
     </div>
   );
 }
+
 NoticesFilters.propTypes = {
   onFilterChange: PropTypes.func.isRequired,
   onSortChange: PropTypes.func.isRequired,

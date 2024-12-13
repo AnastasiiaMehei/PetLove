@@ -45,8 +45,8 @@ export default function ModalAttention({ onClose }) {
           <button className={css.btnsRegLog} type="button">
             Registration
           </button> */}
-           <Link to="/login" className={css.btnsRegLog}>Log In</Link>
-           <Link to="/register" className={css.btnsRegLog}>Registration</Link>
+           <Link to="/users/signin" className={css.btnsRegLog}>Log In</Link>
+           <Link to="/users/signup" className={css.btnsRegLog}>Registration</Link>
         </div>
       </div>
     </div>

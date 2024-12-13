@@ -115,7 +115,7 @@ export const getNotices = async (params = {}) => {
 };
 export const registerUser = async (userData) => {
   try {
-    const response = await instance.post('/auth/register', userData);
+    const response = await instance.post('/users/signup', userData);
     return response.data;
   } catch (error) {
     console.error('Error registering user:', error);
@@ -125,7 +125,7 @@ export const registerUser = async (userData) => {
 
 export const loginUser = async (credentials) => {
   try {
-    const response = await instance.post('/auth/login', credentials);
+    const response = await instance.post('/users/signin', credentials); // Змінили шлях на /users/signin
     localStorage.setItem('token', response.data.token);
     return response.data;
   } catch (error) {
