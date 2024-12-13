@@ -2,7 +2,11 @@
   background-color: var(--primary-color-yellow-light);
   border-radius: 30px;
   width: 335px;
-  height: 378px;
+  /* height: 378px; */
+  display: flex
+;
+    flex-direction: column;
+    align-items: center;
 }
 .filterContainer {
   display: flex;
@@ -15,8 +19,11 @@
   border-bottom: 1px solid rgba(38, 38, 38, 0.1);
     padding-bottom: 15px;
     /* border-width: 1px; */
-    margin-left: 15px;
-    margin-right: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.inputSearch {
+  width: 295px;
 }
 .search {
   border-radius: 30px;
@@ -33,6 +40,17 @@
   width: 143px;
   height: 42px;
   background-color: var(--primary-color-white);
+
+}
+.categoryType {
+  border: none;
+  border-radius: 30px;
+  padding: 12px 12px 12px 12px;
+  width: 295px;  height: 42px;
+  background-color: var(--primary-color-white);
+}
+.select {
+  border-radius: 30px;
 
 }
 .gender {

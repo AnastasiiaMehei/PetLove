@@ -12,6 +12,7 @@ export default function NoticesPage() {
         console.log('Sort option changed:', sortOption);
         // Implement the logic to handle sort changes
     };
+    
 
     return (
         <div>

@@ -18,6 +18,7 @@ const ProfilePage = lazy(() => import("../../pages/ProfilePage/ProfilePage"));
 
 export default function App() {
 const isAuthenticated = Boolean(localStorage.getItem("token"));
+
   return (
 
     <Router>
