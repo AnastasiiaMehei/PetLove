@@ -6,7 +6,9 @@ export default function FriendsPage() {
 <p className={css.mainParagraph}>Our friends</p>
 <div>
     <FriendsList/>
-</div>
+
+</div>  
+
   </div>
   )
 }

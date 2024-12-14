@@ -23,7 +23,8 @@
   --primary-color-white: #fff;
   --primary-color-yellow-black-light: #2626260d;
   --primary-color-dark-gray: #2b2b2a;
-
+  ---primary-color-red: #ef2447;
+  ---primary-color-green: #08aa83;
 }
 
 /* Reset styles */

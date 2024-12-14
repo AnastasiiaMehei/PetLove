@@ -104,9 +104,20 @@ export const getNews = async (query = '') => {
     throw error;
   }
 };
-export const getNotices = async (params = {}) => {
+// export const getNotices = async (params = {}) => {
+//   try {
+//     const response = await instance.get('/notices', { params });
+//     return response.data;
+//   } catch (error) {
+//     console.error('Error fetching notices:', error);
+//     throw error;
+//   }
+// };
+export const getNotices = async ({ page = 1, limit = 10, ...otherParams } = {}) => {
   try {
-    const response = await instance.get('/notices', { params });
+    const response = await instance.get('/notices', {
+      params: { page, limit, ...otherParams },
+    });
     return response.data;
   } catch (error) {
     console.error('Error fetching notices:', error);

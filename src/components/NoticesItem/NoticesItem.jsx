@@ -130,7 +130,7 @@ NoticesItem.propTypes = {
     title: PropTypes.string.isRequired,
     popularity: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
-    birthday: PropTypes.string.isRequired,
+    birthday: PropTypes.string,
     sex: PropTypes.string.isRequired,
     species: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,

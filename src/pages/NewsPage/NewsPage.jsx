@@ -3,7 +3,7 @@ import NewsList from "../../components/NewsList/NewsList";
 import SearchField from "../../components/SearchField/SearchField";
 import css from "./NewsPage.module.css";
 import { getNews } from "../../service/apiService";
-import sprite from "../../images/icons.svg";
+// import sprite from "../../images/icons.svg";
 
 
 export default function NewsPage() {
@@ -30,40 +30,15 @@ export default function NewsPage() {
   return (
     <div className={css.wrapperNews}>
       <h2 className={css.titleNews}>News</h2>
-      <SearchField onSearch={handleSearch} />
+      <SearchField  value={searchQuery}  onSearch={handleSearch} />
+      <div>
+        
+      </div>
       <div className={css.newsCard}>
         <NewsList newsItems={newsItems} />
       </div>
-      <div className={css.loadMoreBtnsDiv}>
-        <button className={css.loadMoreBtns} type="button">
-        <svg className={css.iconLeft}>
-                  <use xlinkHref={`${sprite}#icon-left-side`}></use>
-                </svg>
-                <svg className={css.iconLeft}>
-                  <use xlinkHref={`${sprite}#icon-left-side`}></use>
-                </svg>
-        </button>
-        <button className={css.loadMoreBtns} type="button">
-        <svg className={css.iconLeft}>
-                  <use xlinkHref={`${sprite}#icon-left-side`}></use>
-                </svg>
-        </button>
-        <button className={css.loadMoreBtns} type="button">1</button>
-        <button className={css.loadMoreBtns} type="button">2</button>
-        <button className={css.loadMoreBtns} type="button">...</button>
-        <button className={css.loadMoreBtns} type="button">        <svg className={css.iconLeft}>
-                  <use xlinkHref={`${sprite}#icon-right-side`}></use>
-                </svg></button>
-        <button className={css.loadMoreBtns} type="button">
-        <svg className={css.iconLeft}>
-                  <use xlinkHref={`${sprite}#icon-right-side`}></use>
-                </svg>
-                <svg className={css.iconLeft}>
-                  <use xlinkHref={`${sprite}#icon-right-side`}></use>
-                </svg>
-        </button>
+     
 
-      </div>
     </div>
   );
 }

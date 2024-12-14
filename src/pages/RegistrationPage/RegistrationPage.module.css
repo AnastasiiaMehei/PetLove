@@ -54,7 +54,7 @@ padding: 12px 118px 12px 12px;
     width: 18px;
     height: 18px;
     position: absolute;
-    top: 31%;
+    top: 16%;
     right: 8%;
 }
 .iconEyeOffConfirm {
@@ -62,7 +62,7 @@ padding: 12px 118px 12px 12px;
     height: 18px;
     position: absolute;
     top: 94%;
-    top: 28%;
+    top: 20%;
     right: 8%;
 }
 .btnForm {
@@ -101,4 +101,33 @@ color: var(--primary-color-yellow);
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+.error{
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    color: var(---primary-color-red);stroke: var(---primary-color-red);
+}
+.success {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    color: var(---primary-color-green);}
+.divInput {
+    position: relative;
+}
+.iconClose {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 94%;
+    top: 20%;
+    right: 8%;
+}.ok {    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 12%;
+    right: 15%;
 }

@@ -11,11 +11,32 @@
     padding-left: 7px;
 }
 .search {
-width: 18px;
-height: 18px;
-fill: transparent;
-stroke: var(--primary-color-black);
-position: absolute;
-top: 32%;
-left: 88%;
+    width: 18px;
+    height: 18px;
+    fill: transparent;
+    stroke: var(--primary-color-black);
+    position: absolute;
+    top: 30%;left: 88%;
+    border: none;
+        background: none;
 }
+.divIcon {
+    position: relative;
+}
+.iconClose {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    stroke: var(---primary-color-red);
+    
+    /* fill: black; */
+    top: 26%;    right: 15%;
+    border: none;
+    background: none;
+    }
+    .searchSvg {
+            width: 16px;
+    height: 16px;
+    stroke: var(---primary-color-black);
+    
+    }

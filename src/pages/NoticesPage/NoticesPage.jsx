@@ -21,7 +21,7 @@ export default function NoticesPage() {
                 onSortChange={handleSortChange} 
             />
             <NoticesList/>
-            
+        
         </div>
     )
 }

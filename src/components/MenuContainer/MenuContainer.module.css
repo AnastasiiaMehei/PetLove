@@ -67,7 +67,10 @@ letter-spacing: -0.03em;
 text-transform: uppercase;
 color: var(--primary-color-white);
 border: none;
-cursor: pointer;}
+cursor: pointer;
+DISPLAY: flex;
+    align-items: center;
+    justify-content: center;}
 .buttons:hover {
     background: var(--primary-color-yellow-light); 
     color: var(--primary-color-yellow);

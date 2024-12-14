@@ -24,8 +24,10 @@ export default function MenuContainer ({ onClose }) {
    </nav>
    </div>
    <div className={css.buttonsDiv}>
-    <button className={css.buttons} type="button">Log In</button>
-    <button className={css.buttons} type="button">Registration</button>
+   <NavLink className={css.buttons} to={"/users/signin"}>LOG IN</NavLink>
+   <NavLink className={css.buttons} to={"/users/signup"}>REGISTRATION</NavLink>
+    {/* <button className={css.buttons} type="button">Log In</button>
+    <button className={css.buttons} type="button">Registration</button> */}
    </div>
         </div>
     )
